@@ -1,0 +1,88 @@
+\chapter{Introdução}
+\label{cap:01}
+%Neste capítulo será apresentada uma visão geral desse trabalho de conclusão de curso, com foco no contexto, justificativa e objetivos do presente trabalho.
+%O objetivo deste documento é esclarecer aos autores o formato que deve ser utilizado nas monografias de TCC a serem submetidos ao final dos cursos de Graduação e Pós-Graduação do IFSP câmpus São João da Boa Vista.
+%Neste documento estão listadas as seções obrigatórias que você deverá fornecer, bem como os exemplos dos comandos mais comuns que serão utilizados na construção de seu documento. Para pesquisar sobre mais comandos, recomenda-se a utilização do site \url{https://ctan.org/}, que é a biblioteca principal do \LaTeX, e o do site \url{https://tex.stackexchange.com} que é uma das principais comunidades para solução de dúvidas relacionadas a \LaTeX. Ambas são em inglês.
+%Parte inicial do texto, na qual devem constar o tema e a delimitação do assunto tratado, objetivos da pesquisa e outros elementos necessários para situar o tema do trabalho, tais como: justificativa, procedimentos metodológicos e estrutura do trabalho, tratados de forma sucinta. Salienta-se que os procedimentos metodológicos e o embasamento teórico são tratados, posteriormente, em capítulos próprios e com a profundidade necessária ao trabalho de pesquisa.
+ %\section {Contextualização}
+ Em relação ao desenvolvimento de \textit{software} voltado para dispositivos móveis, existem inúmeras opções de tecnologias. Para criar aplicativos nativos voltados para usuários da plataforma \textit{Android}, pode-se utilizar a linguagem \textit{Java} por meio do Ambiente de Desenvolvimento Integrado (\textit{Integrated Development Environment - IDE}) \textit{Android Studio}. Já para o desenvolvimento nativo voltado para usuários de \textit{iOS}, pode-se optar pela linguagem \textit{Swift} ou \textit{Objective-C} por meio da \textit{IDE} \textit{Xcode}. Para criar aplicações híbridas (\textit{Android} e \textit{iOS}) existem mais opções, como o \newcommand{\Csh}{\textit{C}{\lserif\#}}\Csh{} e o \textit{.NET Framework} por meio do plugin \textit{Xamarin} disponível na \textit{IDE} \textit{Visual Studio}, ou o \textit{Ionic Framework} utilizando \textit{HTML}, \textit{CSS}, \textit{Node.js}, \textit{TypeScript} e \textit{Apache Cordova} utilizando as \textit{IDE's} \textit{Android Studio} e \textit{Xcode}. Cada tecnologia citada anteriormente possui suas especificidades como ecossistema próprio, sintaxe, nomes, tipagem, semântica, um ou mais paradigmas de programação e curva de aprendizado. Com a variedade de opções, pode ser difícil escolher a ideal para cada situação/contexto.
+
+ \citeauthorandyear{TuckerNoonan2009} disseram que, \begin{citacao}Talvez a maior motivação para o desenvolvimento de linguagens de programação nas últimas décadas tenha sido a rápida evolução da demanda de poder computacional e as novas aplicações por parte de uma grande e diversa comunidade de usuários. \end{citacao}
+ 
+ Segundo \citeauthorandyear{Fowler2009}, "Qualquer tolo consegue escrever código que um computador entenda. Bons programadores escrevem código que humanos possam entender". Independente da tecnologia, o propósito sempre é solucionar um problema e/ou atender uma necessidade específica.
+ %Como as linguagens adotam os padrões de lógica de programação (variáveis, comentários, identificadores e atribuições, operações aritméticas, lógicas, repetição e vetores)
+ %é necessário possuir algum domínio da linguagem e ambiente de desenvolvimento escolhidos.¨
+ Porém, apenas escrever algoritmos
+ não é o suficiente, códigos não endentados, variáveis e operações com nomenclaturas pouco intuitivas, excesso ou falta de comentários e operações muito extensas e com várias responsabilidades podem ocasionar na dificuldade de manutenção e falta de flexibilidade.
+ 
+ \citeauthorandyear{Martin2009} cita que, \begin{citacao}"[...] A lógica deve ser direta para dificultar o encobrimento de \textit{bugs}\footnote{Defeito, falha ou erro no código de um programa que provoca seu mau funcionamento.}, as dependências mínimas para facilitar a manutenção, o tratamento de erro completo de acordo com uma estratégia clara e o desempenho próximo do mais eficiente de modo a não incitar as pessoas a tornarem o código confuso com otimizações sorrateiras. O código limpo faz bem apenas uma coisa. \end{citacao}
+ 
+ Linguagens de programação mais verbosas como por exemplo o \textit{Java}, precisam de mais palavras e/ou palavras mais longas e mais símbolos que o necessário para expressar adequadamente a intenção do código, o que não é necessariamente um problema, mas sim a característica da linguagem. Uma tentativa de diminuir a verbosidade tão comum da linguagem \textit{Java} removendo códigos desnecessários para obter algoritmos mais concisos e sucintos foi a criação da biblioteca \textit{Project Lombok}. \citeauthorandyear{Josh2019} diz que, "A biblioteca substitui o \textbf{código clichê} por anotações fáceis de usar, [...] tornando o código mais fácil de ler e menos sujeito a erros e tornando os desenvolvedores mais produtivos"\footnote{De acordo com \citeonline{Josh2019}, \textit{Project Lombok is a mature library that reduces boilerplate code. The library replaces boilerplate code with easy-to-use annotations[...] making code easier to read and less error-prone and making developers more productive}.}, porém como não houve nenhuma modificação na linguagem, código clichê pode acabar resultando em \textbf{mau cheiro de código} (\textit{code smell}). Segundo \citeauthorandyear{Turini2014}, “Mau cheiro é o termo utilizado quando um determinado código possui algum indício de que está precisando ser \textbf{refatorado}".
+
+De acordo com \citeauthorandyear{Fowler2009}, "[...] o propósito da refatoração é tornar o \textit{software} mais fácil de entender e modificar". Em 1997 foi criada uma metodologia ágil denominada de Programação Extrema (\textit{Extreme Programming} - XP), com intuito de facilitar o desenvolvimento de \textit{software} e aprimorar a qualidade dos projetos, sendo a refatoração de código, umas das principais práticas utilizadas.
+Em 1999 foi criado o Desenvolvimento Orientado a Testes (\textit{Test Driven Development} - TDD), onde na primeira etapa se escreve o teste para uma funcionalidade ainda inexistente, na segunda etapa se escreve a funcionalidade a ser testada e na terceira e última o código é refatorado, diminuindo assim futuros \textit{bugs}. Segundo \citeauthorandyear{Guerra2014}, o TDD "é uma técnica de desenvolvimento e projeto de \textit{software} na qual os testes são criados antes do código de produção. É uma técnica que vem se tornando cada vez mais popular no mercado e mais atenção da academia".
+
+Conforme \citeauthorandyear{Martin2009}, "Não basta escrever um código bom. Ele precisa ser mantido sempre limpo". Devido à grande variedade de linguagens, tecnologias, metodologias de desenvolvimento disponíveis no mercado, até mesmo falta de tempo, escolher a linguagem de programação ideal para resolução de um determinado problema e escrever um código limpo independente do paradigma pode ser uma tarefa árdua para desenvolvedores de todos os níveis.
+
+ %Durante o \textit{Google} I/O 17, que é uma conferência anual voltada para o desenvolvimento de aplicações para os seus próprios sistemas operacionais, mais especificamente o \textit{Android}, a linguagem \textit{Kotlin} entrou para o seleto grupo de linguagens oficiais de desenvolvimento de aplicativos para a plataforma da \textit{Google}. Isso já era esperado, pois \textit{Kotlin} vinha recebendo muitos feedbacks positivos da comunidade de desenvolvedores \cite{Resende2018}. Já estavam presentes nesse seleto grupo as amplamente consagradas linguagens \textit{Java} e C++.  
+
+%Criada em 2011 pela JetBrains, criadora de ambientes de desenvolvimento integrado, IDE na sigla em Inglês, e outras ferramentas direcionadas para desenvolvedores de \textit{software} e gestores de projeto, a linguagem recebeu o nome de uma ilha localizada na Rússia, onde a equipe criadora da linguagem residia. O objeto era suprir deficiências encontradas em outras linguagens. Em fevereiro de 2016, foi lançada a versão 1.0 estável do \textit{Kotlin}, sob licença Apache de código aberto. A ideia era criar uma nova linguagem estaticamente tipada para a JVM \cite{Resende2018}.
+
+%Por ser compatível com o Kit de Desenvolvimento \textit{Java} (JDK na sigla em Inglês) versão 6, possibilita que programas criados em \textit{Kotlin}, sejam compatíveis com qualquer versão do \textit{Android}. Um arquivo \textit{Kotlin} possui extensão .kt, o compilador do \textit{Kotlin} transcreve esse arquivo .kt para .class (bytecode do \textit{Java}), com isso, funciona em todos os dispositivos que suportam a linguagem \textit{Java}. A linguagem da JetBrains suporta os paradigmas de programação orientada a objetos e funcional, além de ser totalmente suportada pela IDE oficial de desenvolvimento \textit{Android}, que no momento em que esse artigo fio escrito é plataforma \textit{Android} Studio. 
+
+ %\cite{Lecheta2018} diz que a linguagem \textit{Kotlin} possui uma síntaxe simples interoperabilidade total com \textit{Java}. Portanto, o \textit{Kotlin} não vem para substituir nenhuma das linguagens e/ou tecnologias presentes e consagradas no mercado de desenvolvimento de \textit{software}, mas sim para oferecer mais uma opção para os desenvolvedores no momento da criação de novas aplicações móveis e atualização de aplicações legadas, uma vez que tudo que já foi desenvolvido em todas as bibliotecas do Android "conversam” com \textit{Kotlin}, sem precisarem ser reescritas. 
+
+%Nos dois capítulos posteriores serão apresentadas de maneira resumida visões gerais sobre a história da linguagem \textit{Java} e da tecnologia \textit{Android} respectivamente, para que seja possível, no capítulo seguinte entrar de vez na linguagem que vem despertando cada vez mais curiosidade no mundo do desenvolvimento de \textit{software}.
+
+\section{Justificativa}
+
+ Durante o \textit{Google} I/O 17, uma conferência anual voltada para o desenvolvimento de aplicações para os seus próprios sistemas operacionais, mais especificamente o \textit{Android}, a linguagem \textbf{\textit{Kotlin}} entrou para o seleto grupo de linguagens oficiais de desenvolvimento de aplicativos para a plataforma da \textit{Google}.  \citeauthorandyear{Resende2018} diz que, "isso já era esperado, pois \textit{Kotlin} vinha recebendo muitos \textit{feedbacks} positivos da comunidade de desenvolvedores".
+
+A linguagem \textit{Kotlin} possui uma sintaxe simples, pouco verbosa e concisa. Segundo \citeauthorandyear{Lecheta2018}, "uma das grandes vantagens do \textit{Kotlin} é a sintaxe moderna e expressiva, pois, se comparado ao \textit{Java}, pode-se escrever o mesmo código com muito menos linhas".
+
+O propósito deste trabalho é elucidar de forma comparativa e concisa as vantagens de se optar pela linguagem de programação \textit{Kotlin}, em meio às múltiplas alternativas. Aproveitando os recursos atuais e expressivos da linguagem para desenvolver um código menos clichê, otimizando assim o processo de manutenção e de teste. 
+
+%De acordo com o site oficial da linguagem, disponível em \url{https://www.jetbrains.com/}, atualmente grandes empresas como \textit{Pinterest, Uber, Coursera, Atlassian} e \textit{Evernote}, entre outras, estão utilizando a linguagem da JetBrains de alguma forma no dia-a-dia de suas corporações.
+
+%O webiste Stack Overflow referência para o mundo dos desenvolvedores, mantido pela empresa Stack Exchange, realizou uma pesquisa com mais de 100.000 usuários de sua plataforma em 2018.\cite{StackOverFlow2018} Podem-se destacar os seguintes resultados a respeito da linguagem \textit{Kotlin}:
+ %\begin{itemize}
+ %  \item {2ª} linguagem de programação mais amada;
+ %  \item {4ª} linguagem de programação mais procurada;
+%   \item {22ª} tecnologia mais popular.
+ %\end{itemize}
+ 
+%https://insights.stackoverflow.com/survey/2018/#technology
+%De acordo com \cite{Tiobe2018} que é uma lista ordenada de linguagens de programação, classificada pela freqüência de pesquisa na web usando o nome da linguagem como a palavra-chave, divulgou em seu site, o seguinte resultado:
+ %\begin{itemize} 
+ %\item A linguagem \textit{Kotlin} subiu de {39ª} para a {31ª} colocação %como linguagem de programação mais utilizada em janeiro de %2019.
+ %\end{itemize}
+  %https://www.tiobe.com/tiobe-index/
+
+%Com os dados apresentados a cima, pode-se chegar a conclusão de que a linguagem ganha cada vez mais espaço, e sua adoção está cada vez mais comum entre empresas e desenvolvedores de \textit{software}. \textit{Kotlin} entrará no top 20. Vemos uma adoção rápida no mercado de aplicativos móveis industriais dessa linguagem. \cite{Tiobe2018}.
+
+%https://www.tiobe.com/tiobe-index/
+
+\section{Objetivos}
+Nesta secção serão apresentados os objetivos gerais e específicos desta pesquisa.
+
+\subsection{Objetivo Geral}
+
+%Esta pesquisa tem o objetivo de demonstrar como utilizar linguagem de programação \textit{Kotlin} para escrever códigos diretos, de forma mais rápida, menos verbosos e de fácil interpretaçã. Resultando em código limpo para que seja fácil de refatorá-lo frente a novas necessidades.
+O objetivo dessa pesquisa é apresentar uma análise quali-quantitativa sobre a utilização da linguagem de programação \textit{Kotlin}, referente às questões de usabilidade em desenvolvimento de \textit{software} com foco em aplicações móveis.%, comparando com outras linguagens de programação existentes no mercado.
+
+%Kotlin possui uma sintaxe simples, pouco verbosa e concisa, o que faz com que códigos escrit
+
+\subsection{Objetivos Específicos}
+
+Os passos abaixo descrevem as etapas necessárias para a conclusão do objetivo geral da pesquisa:
+
+\begin{itemize}
+	\item Estudar a linguagem de programação \textit{Kotlin} e questões relacionadas com a usabilidade na programação;
+	\item Definir métricas de usabilidade na programação;
+	\item Comparar o uso do \textit{Kotlin} em relação a linguagem de programação \textit{Java};
+	\item Analisar quanti-qualitativamente o uso do \textit{Kotlin}, evidenciando as métricas de usabilidade estabelecidas.
+\end{itemize}
+
+\section{Organização deste Trabalho}
+
+O presente trabalho está estruturado em cinco capítulos. No primeiro capítulo é apresentada uma breve introdução, objetivos buscados e justificativa da pesquisa. No segundo capítulo são expostos os textos referenciais. A metodologia do projeto é demonstrada no terceiro capítulo. No quarto capítulo são exibidos os resultados finais. As conclusões são desenvolvidas no quinto capítulo.
